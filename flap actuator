@@ -1,0 +1,40 @@
+/*
+Emily Flood
+December 11, 2020
+
+This code is a modified version of the "Blink" example in the Arduino Uno library
+
+The flap actuator is meant to make the two "wings" flap up and down with the use of magnets.
+These magnets are connected to copper wire soldered to copper tape, where alligator clips
+are coonnected. The idea is the Arduino will deliver voltage on and off to the magnets
+so that the wings can be repelled by the magnets or "flap".
+*/
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(13, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(7, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);
+  digitalWrite(13,LOW);
+  delay(1000);
+  digitalWrite(11, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);
+  digitalWrite(11,LOW);
+  delay(1000);
+  digitalWrite(9, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);
+  digitalWrite(9, LOW);
+  delay(1000);
+  digitalWrite(7, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);
+  digitalWrite(7, LOW);
+  delay(1000);                       // wait for a second
+}
